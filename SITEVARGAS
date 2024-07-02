@@ -12,24 +12,50 @@
             margin: 0;
             padding: 0;
             background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
 
         .container {
-            width: 80%;
-            margin: 0 auto;
+            width: 300px; /* Largura dos quadrados */
+            height: 400px; /* Altura dos quadrados */
+            margin: 20px;
             padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centraliza conteúdo verticalmente */
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         header {
             background-color: #333;
             color: #fff;
             padding: 10px 0;
+            text-align: center;
+            width: 100%;
         }
 
         header h1 {
             margin: 0;
             padding: 10px 0;
-            text-align: center;
+            font-weight: bold;
         }
 
         nav ul {
@@ -54,9 +80,23 @@
         }
 
         section {
-            background-color: #fff;
-            margin-bottom: 20px;
+            width: 100%;
             padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centraliza conteúdo verticalmente */
+            text-align: center;
+        }
+
+        section h2 {
+            margin-top: 0;
+        }
+
+        section img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
         }
 
         footer {
@@ -64,8 +104,6 @@
             color: #fff;
             text-align: center;
             padding: 10px 0;
-            position: fixed;
-            bottom: 0;
             width: 100%;
         }
 
@@ -76,7 +114,7 @@
         /* Responsividade */
         @media (max-width: 768px) {
             .container {
-                width: 90%;
+                width: 90%; /* Largura dos quadrados em dispositivos menores */
             }
         }
     </style>
@@ -95,25 +133,20 @@
         </div>
     </header>
 
-    <section id="biografia">
-        <div class="container">
-            <h2>Biografia</h2>
-            <p>Kaíque Vargas sempre amou futebol desde criança. Com o apoio dos pais, ele se destacou na escola e recebeu várias ofertas de bolsas de estudos de universidades renomadas. Optou por uma universidade conhecida por seu programa competitivo de futebol. Enfrentando desafios intensos no primeiro ano, Kaíque aprendeu a equilibrar treinos exigentes com seus estudos acadêmicos. Com habilidade técnica e determinação, ele se tornou uma peça fundamental no time, conquistando títulos de conferência e reconhecimento pessoal. Além do sucesso no campo, Kaíque se destacou academicamente, preparando-se para um futuro promissor tanto no futebol quanto em sua carreira acadêmica., etc.</p>
-        </div>
+    <section id="biografia" class="container">
+        <h2>Biografia</h2>
+        <a href="https://ibb.co/dQZQpFc"><img src="https://i.ibb.co/vJ9JdpB/Ka-que-Vargas.jpg" alt="Ka-que-Vargas" border="0"></a>
+        <p>Kaíque Vargas sempre amou futebol desde criança e dentro da Atlética Raposa conseguiu mostrar seu futebol e ser campeões de diversos campeonatos.</p>
     </section>
 
-    <section id="conquistas">
-        <div class="container">
-            <h2>Conquistas</h2>
-            <p> Engenhariadas Paranaense, Taça Universitária de Toledo, Quadrangular de Palotina, Joia Oeste, Copa Inter Atléticas. .</p>
-        </div>
+    <section id="conquistas" class="container">
+        <h2>Conquistas</h2>
+        <p>Engenhariadas Paranaense, Taça Universitária de Toledo, Quadrangular de Palotina, Joia Oeste, Copa Inter Atléticas.</p>
     </section>
 
-    <section id="contato">
-        <div class="container">
-            <h2>Contato</h2>
-            <p>Rede social: Instagram: vargasbfr.</p>
-        </div>
+    <section id="contato" class="container">
+        <h2>Contato</h2>
+        <p>Rede social: Instagram: vargasbfr.</p>
     </section>
 
     <footer>
